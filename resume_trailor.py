@@ -3,10 +3,16 @@ from groq import Groq
 from dotenv import load_dotenv
 import xml.etree.ElementTree as ET
 from pdf_extractor import extract_text_from_pdf
+import streamlit as st
 
 load_dotenv()
 
-client = Groq(api_key=os.getenv("Groq_API_Key"))
+try:
+    api_key = st.secrets["Groq_API_Key"]
+except Exception:
+    api_key = os.getenv("Groq_API_Key")
+
+client = Groq(api_key=api_key)
 
 # sample dataset before UI
 

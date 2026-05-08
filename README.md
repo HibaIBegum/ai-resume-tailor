@@ -3,6 +3,9 @@
 AI-powered resume analyzer that compares your resume against 
 a job description and returns tailored recommendations.
 
+## Live Demo
+🚀 [Try it here](https://ai-resume-tailor-h.streamlit.app/)
+
 ## Features
 - Match score with explanation
 - ATS keyword extraction
